@@ -1,0 +1,122 @@
+Last login: Tue Nov  5 18:09:03 on console
+MacBook-Air-Vladimir:~ vladimir$ git --version
+git version 2.17.2 (Apple Git-113)
+MacBook-Air-Vladimir:~ vladimir$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+MacBook-Air-Vladimir:~ vladimir$ git status
+fatal: not a git repository (or any of the parent directories): .git
+MacBook-Air-Vladimir:~ vladimir$ git config --global user.name Vladimir
+MacBook-Air-Vladimir:~ vladimir$ git config --global user.email valdemur95@yandex.ru
+MacBook-Air-Vladimir:~ vladimir$ git config user.email
+valdemur95@yandex.ru
+MacBook-Air-Vladimir:~ vladimir$ git config user.name
+Vladimir
+MacBook-Air-Vladimir:~ vladimir$ cd
+MacBook-Air-Vladimir:~ vladimir$ mkdir projects
+MacBook-Air-Vladimir:~ vladimir$ cd projects
+MacBook-Air-Vladimir:projects vladimir$ git clone https://github.com/Vladimir-Stepanenko/new_repository.git
+Cloning into 'new_repository'...
+warning: You appear to have cloned an empty repository.
+MacBook-Air-Vladimir:projects vladimir$ sudo git clone https://github.com/Vladimir-Stepanenko/new_repository.git
+Password:
+fatal: destination path 'new_repository' already exists and is not an empty directory.
+MacBook-Air-Vladimir:projects vladimir$ git clone https://github.com/Vladimir-Stepanenko/new_repository.git
+fatal: destination path 'new_repository' already exists and is not an empty directory.
+MacBook-Air-Vladimir:projects vladimir$ git remote добавить источник https://github.com/Vladimir-Stepanenko/new_repository.git
+fatal: not a git repository (or any of the parent directories): .git
+MacBook-Air-Vladimir:projects vladimir$ git clone https://github.com/Vladimir-Stepanenko/new_repository.git
+fatal: destination path 'new_repository' already exists and is not an empty directory.
+MacBook-Air-Vladimir:projects vladimir$ git clone https://github.com/Vladimir-Stepanenko/new_repository.git init
+Cloning into 'init'...
+warning: You appear to have cloned an empty repository.
+MacBook-Air-Vladimir:projects vladimir$ git init
+Initialized empty Git repository in /Users/vladimir/projects/.git/
+MacBook-Air-Vladimir:projects vladimir$ git clone https://github.com/Vladimir-Stepanenko/new_repository.git
+fatal: destination path 'new_repository' already exists and is not an empty directory.
+MacBook-Air-Vladimir:projects vladimir$ ls
+init		new_repository
+MacBook-Air-Vladimir:projects vladimir$ ls -la
+total 0
+drwxr-xr-x   5 vladimir  staff   160  6 ноя 19:46 .
+drwxr-xr-x+ 41 vladimir  staff  1312  5 ноя 18:15 ..
+drwxr-xr-x   9 vladimir  staff   288  6 ноя 19:46 .git
+drwxr-xr-x   3 vladimir  staff    96  6 ноя 19:46 init
+drwxr-xr-x   3 vladimir  staff    96  5 ноя 18:23 new_repository
+MacBook-Air-Vladimir:projects vladimir$ ls -la .git
+total 24
+drwxr-xr-x   9 vladimir  staff  288  6 ноя 19:46 .
+drwxr-xr-x   6 vladimir  staff  192  6 ноя 19:50 ..
+-rw-r--r--   1 vladimir  staff   23  6 ноя 19:46 HEAD
+-rw-r--r--   1 vladimir  staff  137  6 ноя 19:46 config
+-rw-r--r--   1 vladimir  staff   73  6 ноя 19:46 description
+drwxr-xr-x  13 vladimir  staff  416  6 ноя 19:46 hooks
+drwxr-xr-x   3 vladimir  staff   96  6 ноя 19:46 info
+drwxr-xr-x   4 vladimir  staff  128  6 ноя 19:46 objects
+drwxr-xr-x   4 vladimir  staff  128  6 ноя 19:46 refs
+MacBook-Air-Vladimir:projects vladimir$ nano
+
+  GNU nano 2.0.6                New Buffer                            Modified  
+
+test commit 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        [ XOFF ignored, mumble mumble ]
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
